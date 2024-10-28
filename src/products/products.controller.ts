@@ -59,7 +59,6 @@ export class ProductsController {
     cmd: 'validate_products',
   })
   validateProduct(@Payload() ids: number[]) {
-    console.log('entra a validate Products');
     return this.productsService.validateProducts(ids);
   }
 }

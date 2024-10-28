@@ -17,7 +17,6 @@ export class ProductsService extends PrismaClient implements OnModuleInit {
     const create = await this.product.create({
       data: createProductDto,
     });
-    console.log('create', create);
     return create;
   }
 
@@ -40,7 +39,7 @@ export class ProductsService extends PrismaClient implements OnModuleInit {
   }
 
   async findOne(id: number) {
-    console.log('finone');
+    // console.log('finone');
     const product = await this.product.findUnique({
       where: {
         id,
